@@ -1,6 +1,6 @@
 
 import './App.css';
-import Translate  from './translate';
+import Translate  from './Translate';
 function App() {
   return (
     
