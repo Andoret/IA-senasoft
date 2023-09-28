@@ -29,7 +29,10 @@ p{
    background-color: rgba(50, 201, 201, 0.61);
     border: none !important;
     color: white;
-    text-shadow: 1px 1px 2px rgba(20, 51, 81, 0.716) !important
+    text-shadow: 1px 1px 2px rgba(20, 51, 81, 0.716) !important;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    
 }
 .form-control:focus{
     background-color: #0575E6;
@@ -37,10 +40,45 @@ p{
     text-shadow: 1px 1px 2px rgba(20, 51, 81, 0.788) !important
 }
 #send-button{
-    background-color: #00F260;
-    margin-top: 3%;
+    background-color: #0c2f53;
+    margin-top: 30%;
     margin-left: 20%;
+    color: white;
 }
 #send-button:hover{
-    background-color: #2fbb67;
+    background-color: #0f59a3;
+}
+
+#preview-button{
+   background-color: #0c2f53;
+   color: white;
+   margin-left: 0;
+   border-top-left-radius: 0;
+   border-bottom-left-radius: 0;
+}
+#preview-button:hover{
+    background-color: #0f59a3;
+    color: white;
+    margin-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+ }
+
+#div3{
+    width: 80%;
+    height: auto;
+    margin-top: -10% !important;
+    margin-bottom: 5%;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 3%;
+}
+
+#img2{
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }

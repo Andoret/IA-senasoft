@@ -51,7 +51,7 @@ def traducir(palabras=str):
         resultados.append(x[i]['text'])
     return resultados
 
-def deteccion(link):
+def deteccion(link="./static/Perro-1.jpg"):
    
 
 
@@ -64,6 +64,7 @@ def deteccion(link):
 
     #Ruta de la imagen a clasificar
     image_path = link
+    
 
     # Abre la imagen y la envía a la API de predicción
     with open(image_path, "rb") as image_file:
@@ -125,7 +126,7 @@ def face():
         print(f"Ubicación de la cara: {face['faceRectangle']}\n")
 
 
-x = deteccion("Perro-1.jpg")
+x = deteccion()
 print(traducir(x[0]))
         
     

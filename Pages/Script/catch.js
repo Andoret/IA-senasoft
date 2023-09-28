@@ -1,20 +1,49 @@
-import  fs from 'fs;'
-const formulario = document.querySelector("#envio");
+document.addEventListener('DOMContentLoaded', function() {
+    const formulario = document.getElementById('envio');
+    
+     const resultadoSpan = document.getElementById('resultado');
+    
 
-const procesamiento= (event)=>{
+    formulario.addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita que el formulario se envíe de forma convencional
+
+        // Obtener los valores de los campos de entrada
+        const urlImg = document.getElementById("imageurl").value;
+        console.log(urlImg)
+        // Enviar los valores al servidor Flask
+        fetch('/translate', {
+            method: 'POST',
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ "url": urlImg })
+            
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Mostrar el resultado devuelto por el servidor en el HTML
+            console.log(data)
+        })
+        .catch(error => {
+            console.error('Error al enviar los datos al servidor', error);
+        });
+    }); 
+
+   
+});
+
+
+function mostrarImagen(){
     event.preventDefault();
-const datos= new FormData(event.target)
-
-const datosDict= Object.fromEntries(datos.entries());
-
-console.log(JSON.stringify(datosDict))
-    fs.writeFile("data.json",datosDict,(error)=>{
-        if (error){
-            console.log(error);
-            throw error;
-        }
-        console.log("data.json guardado")
-    })
+    const url = document.getElementById("imageurl").value;
+    console.log(url)
+    const img= document.getElementById("img2");
+    img.src=url;
 }
 
-formulario.addEventListener('submit',procesamiento)
+
+
+
+
+
