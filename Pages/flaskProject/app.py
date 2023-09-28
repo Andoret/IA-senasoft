@@ -1,10 +1,12 @@
-from flask import Flask,request,jsonify
+from flask import Flask,request,jsonify,render_template
 
 import function
 from function import *
 app = Flask(__name__)
 
-
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 @app.route('/translate', methods=['GET','POST'])
 def translate():  # put application's code here
