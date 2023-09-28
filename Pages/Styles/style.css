@@ -1,0 +1,46 @@
+body{
+    background: #00F260; 
+    background: -webkit-linear-gradient(to right, #2184e7, #0be763); 
+    background: linear-gradient(to right, #0575E6, #00F260);
+    background-size: cover;
+    
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    max-height: 100vh;
+}
+
+p{
+    color: white;
+}
+
+#container_box{
+    background-color: #0576e685 !important;
+    border-radius: 5px;
+    padding-bottom: 2%;
+    margin-left: 5%;
+}
+
+.color{
+    background-color: black;
+}
+.form-control{
+   background-color: rgba(50, 201, 201, 0.61);
+    border: none !important;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(20, 51, 81, 0.716) !important
+}
+.form-control:focus{
+    background-color: #0575E6;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(20, 51, 81, 0.788) !important
+}
+#send-button{
+    background-color: #00F260;
+    margin-top: 3%;
+    margin-left: 20%;
+}
+#send-button:hover{
+    background-color: #2fbb67;
+}
